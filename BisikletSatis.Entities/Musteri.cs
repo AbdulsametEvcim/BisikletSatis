@@ -5,7 +5,7 @@ namespace BisikletSatis.Entities
     public class Musteri : IEntity
     {
         public int Id { get; set; }
-        [Display(Name = "Bisiklet Id")]
+        [Display(Name = "Bisiklet")]
         public int BisikletId { get; set; }
         [StringLength(50)]
         [Display(Name = "Adı"), Required(ErrorMessage = "{0} Boş Bırakılamaz!")]
@@ -23,6 +23,7 @@ namespace BisikletSatis.Entities
         [StringLength(20)]
         public string? Telefon { get; set; }
         public string? Notlar { get; set; }
+        [Display(Name = "Bisiklet")]
         public Bisiklet? Bisiklet { get; set; }
 
 
