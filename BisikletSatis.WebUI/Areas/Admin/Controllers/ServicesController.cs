@@ -1,12 +1,13 @@
 ﻿using BisikletSatis.Entities;
 using BisikletSatis.Service.Abstract;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
 namespace BisikletSatis.WebUI.Areas.Admin.Controllers
 {
-    [Area("Admin")]
+    [Area("Admin"), Authorize]
     public class ServicesController : Controller
     {
         private readonly IService<Tamirhane> _service;

@@ -1,13 +1,13 @@
 ﻿using BisikletSatis.Entities;
 using BisikletSatis.Service.Abstract;
-using Microsoft.AspNetCore.Http;
+using BisikletSatis.WebUI.Utils;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using System.Threading.Tasks;
 
 namespace BisikletSatis.WebUI.Areas.Admin.Controllers
 {
-    [Area("Admin")]
+    [Area("Admin"), Authorize(Policy = "AdminPolicy")]
     public class BicyclesController : Controller
     {
         private readonly IService<Bisiklet> _service;
@@ -42,12 +42,14 @@ namespace BisikletSatis.WebUI.Areas.Admin.Controllers
         // POST: BicyclesController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> CreateAsync(Bisiklet bisiklet)
+        public async Task<ActionResult> CreateAsync(Bisiklet bisiklet, IFormFile? Resim1, IFormFile? Resim2)
         {
             if (ModelState.IsValid)
             {
                 try
                 {
+                    bisiklet.Resim1 = await FileHelper.FileLoaderAsync(Resim1, "/Img/Bicycles/");
+                    bisiklet.Resim2 = await FileHelper.FileLoaderAsync(Resim2, "/Img/Bicycles/");
                     await _service.AddAsync(bisiklet);
                     await _service.SaveAsync();
                     return RedirectToAction(nameof(Index));
@@ -72,12 +74,20 @@ namespace BisikletSatis.WebUI.Areas.Admin.Controllers
         // POST: BicyclesController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> EditAsync(int id, Bisiklet bisiklet)
+        public async Task<ActionResult> EditAsync(int id, Bisiklet bisiklet, IFormFile? Resim1, IFormFile? Resim2)
         {
             if (ModelState.IsValid)
             {
                 try
                 {
+                    if (Resim1 is not null)
+                    {
+                        bisiklet.Resim1 = await FileHelper.FileLoaderAsync(Resim1, "/Img/Bicycles/");
+                    }
+                    if (Resim2 is not null)
+                    {
+                        bisiklet.Resim2 = await FileHelper.FileLoaderAsync(Resim2, "/Img/Bicycles/");
+                    }
                     _service.Update(bisiklet);
                     await _service.SaveAsync();
                     return RedirectToAction(nameof(Index));

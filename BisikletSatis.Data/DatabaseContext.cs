@@ -13,6 +13,7 @@ namespace BisikletSatis.Data
         public DbSet<Tamirhane> Tamirhaneler { get; set; }
         public DbSet<Musteri> Musteriler { get; set; }
         public DbSet<Satis> Satislar { get; set; }
+        public DbSet<Slider> Sliders { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"server=(LocalDB)\MSSQLLocalDB;

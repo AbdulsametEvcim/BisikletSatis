@@ -4,6 +4,7 @@ using BisikletSatis.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BisikletSatis.Data.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    partial class DatabaseContextModelSnapshot : ModelSnapshot
+    [Migration("20250807140458_BisikletResimEklendi")]
+    partial class BisikletResimEklendi
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -137,7 +140,7 @@ namespace BisikletSatis.Data.Migrations
                             Id = 1,
                             Adi = "Admin",
                             AktifMi = true,
-                            EklemeTarihi = new DateTime(2025, 8, 8, 14, 30, 44, 343, DateTimeKind.Local).AddTicks(4239),
+                            EklemeTarihi = new DateTime(2025, 8, 7, 17, 4, 57, 586, DateTimeKind.Local).AddTicks(2520),
                             Email = "admin@bisikletsatis.com",
                             KullaniciAdi = "admin",
                             RolId = 1,
@@ -265,35 +268,6 @@ namespace BisikletSatis.Data.Migrations
                     b.HasIndex("MusteriId");
 
                     b.ToTable("Satislar");
-                });
-
-            modelBuilder.Entity("BisikletSatis.Entities.Slider", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Aciklama")
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<string>("Baslik")
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<string>("Link")
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<string>("Resim")
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Sliders");
                 });
 
             modelBuilder.Entity("BisikletSatis.Entities.Tamirhane", b =>

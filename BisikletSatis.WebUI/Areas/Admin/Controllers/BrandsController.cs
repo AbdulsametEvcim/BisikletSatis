@@ -1,12 +1,13 @@
 ﻿using BisikletSatis.Entities;
 using BisikletSatis.Service.Abstract;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
 namespace BisikletSatis.WebUI.Areas.Admin.Controllers
 {
-    [Area("Admin")]
+    [Area("Admin"), Authorize(Policy = "AdminPolicy")]
     public class BrandsController : Controller
     {
         private readonly IService<Marka> _service;
