@@ -1,21 +1,32 @@
-using System.Diagnostics;
+using BisikletSatis.Entities;
+using BisikletSatis.Service.Abstract;
 using BisikletSatis.WebUI.Models;
 using Microsoft.AspNetCore.Mvc;
+using System.Diagnostics;
+using System.Threading.Tasks;
 
 namespace BisikletSatis.WebUI.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly IService<Slider> _service;
+        private readonly IService<Bisiklet> _serviceBisiklet;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(IService<Slider> service, IService<Bisiklet> serviceBisiklet)
         {
-            _logger = logger;
+            _service = service;
+            _serviceBisiklet = serviceBisiklet;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> IndexAsync()
         {
-            return View();
+            var model = new HomePageViewModel()
+            {
+                Sliders = await _service.GetAllAsync(),
+                Bisikletler = await _serviceBisiklet.GetAllAsync(a => a.AnaSayfa)
+            };
+               
+            return View(model);
         }
 
         public IActionResult Privacy()
