@@ -7,16 +7,16 @@ namespace BisikletSatis.WebUI.Controllers
 {
     public class BisikletController : Controller
     {
-        private readonly IService<Bisiklet> _serviceBisiklet;
+        private readonly IBicycleService _serviceBisiklet;
 
-        public BisikletController(IService<Bisiklet> serviceBisiklet)
+        public BisikletController(IBicycleService serviceBisiklet)
         {
             _serviceBisiklet = serviceBisiklet;
         }
 
         public async Task<IActionResult> IndexAsync(int id)
         {
-            var model = await _serviceBisiklet.FindAsync(id);
+            var model = await _serviceBisiklet.GetCustomBicycle(id);
             return View(model);
         }
     }

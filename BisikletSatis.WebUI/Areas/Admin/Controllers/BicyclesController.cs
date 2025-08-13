@@ -10,10 +10,10 @@ namespace BisikletSatis.WebUI.Areas.Admin.Controllers
     [Area("Admin"), Authorize(Policy = "AdminPolicy")]
     public class BicyclesController : Controller
     {
-        private readonly IService<Bisiklet> _service;
+        private readonly IBicycleService _service;
         private readonly IService<Marka> _serviceMarka;
 
-        public BicyclesController(IService<Bisiklet> service, IService<Marka> serviceMarka)
+        public BicyclesController(IBicycleService service, IService<Marka> serviceMarka)
         {
             _service = service;
             _serviceMarka = serviceMarka;
@@ -22,7 +22,7 @@ namespace BisikletSatis.WebUI.Areas.Admin.Controllers
         // GET: BicyclesController
         public async Task<IActionResult> IndexAsync()
         {
-            var model = await _service.GetAllAsync();
+            var model = await _service.GetCustomBicycleList();
             return View(model);
         }
 

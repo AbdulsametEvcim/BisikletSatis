@@ -10,9 +10,9 @@ namespace BisikletSatis.WebUI.Controllers
     public class HomeController : Controller
     {
         private readonly IService<Slider> _service;
-        private readonly IService<Bisiklet> _serviceBisiklet;
+        private readonly IBicycleService _serviceBisiklet;
 
-        public HomeController(IService<Slider> service, IService<Bisiklet> serviceBisiklet)
+        public HomeController(IService<Slider> service, IBicycleService serviceBisiklet)
         {
             _service = service;
             _serviceBisiklet = serviceBisiklet;
@@ -23,7 +23,7 @@ namespace BisikletSatis.WebUI.Controllers
             var model = new HomePageViewModel()
             {
                 Sliders = await _service.GetAllAsync(),
-                Bisikletler = await _serviceBisiklet.GetAllAsync(a => a.AnaSayfa)
+                Bisikletler = await _serviceBisiklet.GetCustomBicycleList(a => a.AnaSayfa)
             };
                
             return View(model);

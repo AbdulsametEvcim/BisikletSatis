@@ -17,6 +17,7 @@ namespace BisikletSatis.WebUI
             builder.Services.AddDbContext<DatabaseContext>();
 
             builder.Services.AddTransient(typeof(IService<>), typeof(Service<>));
+            builder.Services.AddTransient<IBicycleService, BicycleService>();
 
             builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(x =>
             {
