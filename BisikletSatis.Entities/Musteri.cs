@@ -24,10 +24,15 @@ namespace BisikletSatis.Entities
         public string? Telefon { get; set; }
         public string? Notlar { get; set; }
         [Display(Name = "Bisiklet")]
-        public Bisiklet? Bisiklet { get; set; }
+        public virtual Bisiklet? Bisiklet { get; set; }
+        [Display(Name = "Ad Soyad"), ScaffoldColumn(false)]
+        public string? AdSoyad
+        {
+            get
+            {
+                return this.Adi + " " + this.Soyadi;
+            }
 
-
-
-       
+        }
     }
 }

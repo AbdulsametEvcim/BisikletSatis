@@ -38,8 +38,8 @@ namespace BisikletSatis.WebUI.Areas.Admin.Controllers
         // GET: SalesController/Create
         public async Task<ActionResult> CreateAsync()
         {
-            ViewBag.BisikletId = new SelectList(await _serviceBisiklet.GetAllAsync(), "Id", "Modeli");
-            ViewBag.MusteriId = new SelectList(await _serviceMusteri.GetAllAsync(), "Id", "Adi");
+            ViewBag.BisikletId = new SelectList(await _serviceBisiklet.GetAllAsync(), "Id", "BisikletBilgi");
+            ViewBag.MusteriId = new SelectList(await _serviceMusteri.GetAllAsync(), "Id", "AdSoyad");
             return View();
         }
 

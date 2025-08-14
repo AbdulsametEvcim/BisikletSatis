@@ -19,6 +19,8 @@ namespace BisikletSatis.Data
             optionsBuilder.UseSqlServer(@"server=(LocalDB)\MSSQLLocalDB;
             database=BisikletSatisNetCore; integrated security=true;
             TrustServerCertificate=true;");
+            optionsBuilder.UseLazyLoadingProxies();
+            base.OnConfiguring(optionsBuilder);
 
             optionsBuilder.ConfigureWarnings(warnings => warnings.Ignore
             (RelationalEventId.PendingModelChangesWarning));

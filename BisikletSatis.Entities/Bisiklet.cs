@@ -31,5 +31,13 @@ namespace BisikletSatis.Entities
         [StringLength(100)]
         public string? Resim3 { get; set; }
         public virtual Marka? Marka { get; set; }
+        [Display(Name = "Ad Soyad"), ScaffoldColumn(false)]
+        public string? BisikletBilgi
+        {
+            get
+            {
+                return this.Renk + " " + this.Modeli + " " + this.BisikletTipi;
+            }
+        }
     }
 }
