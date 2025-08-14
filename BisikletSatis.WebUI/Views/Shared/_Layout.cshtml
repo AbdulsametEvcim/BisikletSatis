@@ -21,12 +21,31 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Ana Sayfa</a>
+                            <a class="nav-link text-dark" asp-controller="Home" asp-action="Index">Ana Sayfa</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Gizlilik</a>
+                            <a class="nav-link text-dark" asp-controller="Home" asp-action="Privacy">Gizlilik</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-controller="Bisiklet" asp-action="List">Tüm Araçlarımız</a>
                         </li>
                     </ul>
+                </div>
+                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search" asp-action="Ara" asp-controller="Bisiklet" method="get"> 
+                    <input name="q" type="search" class="form-control form-control text-bg" placeholder="Ara..." aria-label="Search"> 
+                    </form>
+                <div class="text-end"> 
+                    @if (Context.User.Identity.IsAuthenticated)
+                    {
+                        <a asp-controller="Account" asp-action="Index" class="btn btn-primary me-2">Hesabım</a>
+                        <a asp-controller="Account" asp-action="Logout" class="btn btn-primary">Oturumu kapat</a>
+                    }
+                    else
+                    {
+                        <a asp-controller="Account" asp-action="Login" class="btn btn-primary me-2">Giriş</a>
+                        <a asp-controller="Account" asp-action="Register" class="btn btn-primary">Kaydol</a>
+                    }
+                    
                 </div>
             </div>
         </nav>

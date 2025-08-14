@@ -3,7 +3,6 @@ using BisikletSatis.Service.Abstract;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
-using System.Threading.Tasks;
 
 namespace BisikletSatis.WebUI.Areas.Admin.Controllers
 {
@@ -44,7 +43,7 @@ namespace BisikletSatis.WebUI.Areas.Admin.Controllers
                     var rol = _serviceRol.Get(r => r.Id == account.RolId);
                     var claims = new List<Claim>()
                     {
-                        new Claim(ClaimTypes.Name, account.Adi),
+                        new Claim(ClaimTypes.Name, account.Adi)
                     };
                     if (rol is not null)
                     {

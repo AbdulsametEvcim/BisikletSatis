@@ -19,5 +19,16 @@ namespace BisikletSatis.WebUI.Controllers
             var model = await _serviceBisiklet.GetCustomBicycle(id);
             return View(model);
         }
+        [Route("tum-bisikletlerimiz")]
+        public async Task<IActionResult> List()
+        {
+            var model = await _serviceBisiklet.GetCustomBicycleList(c => c.SatistaMi);
+            return View(model);
+        }
+        public async Task<IActionResult> Ara(string q)
+        {
+            var model = await _serviceBisiklet.GetCustomBicycleList(c => c.SatistaMi && c.Marka.Adi.Contains(q) || c.BisikletTipi.Contains(q));
+            return View(model);
+        }
     }
 }

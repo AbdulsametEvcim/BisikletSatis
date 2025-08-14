@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BisikletSatis.WebUI.Areas.Admin.Controllers
 {
-    [Area("Admin"), Authorize]
+    [Area("Admin"), Authorize(Policy = "AdminPolicy")]
     public class ServicesController : Controller
     {
         private readonly IService<Tamirhane> _service;

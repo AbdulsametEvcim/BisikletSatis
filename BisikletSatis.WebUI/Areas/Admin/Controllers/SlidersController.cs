@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BisikletSatis.WebUI.Areas.Admin.Controllers
 {
-    [Area("Admin"), Authorize]
+    [Area("Admin"), Authorize(Policy = "AdminPolicy")]
     public class SlidersController : Controller
     {
         private readonly IService<Slider> _service;
