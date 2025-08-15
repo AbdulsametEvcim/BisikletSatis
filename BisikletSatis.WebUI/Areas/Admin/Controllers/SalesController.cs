@@ -1,10 +1,8 @@
 ﻿using BisikletSatis.Entities;
 using BisikletSatis.Service.Abstract;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using System.Threading.Tasks;
 
 namespace BisikletSatis.WebUI.Areas.Admin.Controllers
 {
@@ -61,16 +59,16 @@ namespace BisikletSatis.WebUI.Areas.Admin.Controllers
                     ModelState.AddModelError("", "Hata Oluştu!");
                 }
             }
-            ViewBag.BisikletId = new SelectList(await _serviceBisiklet.GetAllAsync(), "Id", "Modeli");
-            ViewBag.MusteriId = new SelectList(await _serviceMusteri.GetAllAsync(), "Id", "Adi");
+            ViewBag.BisikletId = new SelectList(await _serviceBisiklet.GetAllAsync(), "Id", "BisikletBilgi");
+            ViewBag.MusteriId = new SelectList(await _serviceMusteri.GetAllAsync(), "Id", "AdSoyad");
             return View(satis);
         }
 
         // GET: SalesController/Edit/5
         public async Task<ActionResult> EditAsync(int id)
         {
-            ViewBag.BisikletId = new SelectList(await _serviceBisiklet.GetAllAsync(), "Id", "Modeli");
-            ViewBag.MusteriId = new SelectList(await _serviceMusteri.GetAllAsync(), "Id", "Adi");
+            ViewBag.BisikletId = new SelectList(await _serviceBisiklet.GetAllAsync(), "Id", "BisikletBilgi");
+            ViewBag.MusteriId = new SelectList(await _serviceMusteri.GetAllAsync(), "Id", "AdSoyad");
             var model = await _service.FindAsync(id);
             return View(model);
         }
@@ -93,8 +91,8 @@ namespace BisikletSatis.WebUI.Areas.Admin.Controllers
                     ModelState.AddModelError("", "Hata Oluştu!");
                 }
             }
-            ViewBag.BisikletId = new SelectList(await _serviceBisiklet.GetAllAsync(), "Id", "Modeli");
-            ViewBag.MusteriId = new SelectList(await _serviceMusteri.GetAllAsync(), "Id", "Adi");
+            ViewBag.BisikletId = new SelectList(await _serviceBisiklet.GetAllAsync(), "Id", "BisikletBilgi");
+            ViewBag.MusteriId = new SelectList(await _serviceMusteri.GetAllAsync(), "Id", "AdSoyad");
             return View(satis);
         }
 

@@ -1,4 +1,4 @@
-﻿using BisikletSatis.Entities;
+﻿  using BisikletSatis.Entities;
 using BisikletSatis.Service.Abstract;
 using BisikletSatis.WebUI.Models;
 using Microsoft.AspNetCore.Mvc;
