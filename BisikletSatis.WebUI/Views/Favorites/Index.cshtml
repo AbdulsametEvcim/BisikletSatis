@@ -17,7 +17,7 @@
         {
             <tr>
                 <td>
-                    <a href="/Bisiklet/Index/@item.Id">
+                    <a class="nav-link text-dark" href="/Bisiklet/Index/@item.Id">
                         @item.Marka.Adi @item.Modeli @item.Renk @item.BisikletTipi
                     </a>
                 </td>
@@ -27,6 +27,11 @@
                     </a>
                 </td>
                 <td>
+                    <form action="/Favorites/Remove" method="post">
+                        <input type="hidden" name="bisikletId"
+                               value="@item.Id" />
+                        <button type="submit" class="btn btn-danger">X</button>
+                    </form>
                 </td>
             </tr>
         }

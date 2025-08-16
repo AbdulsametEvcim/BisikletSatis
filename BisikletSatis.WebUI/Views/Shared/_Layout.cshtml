@@ -6,6 +6,7 @@
     <title>@ViewData["Title"] - BisikletSatis.WebUI</title>
     <script type="importmap"></script>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/BisikletSatis.WebUI.styles.css" asp-append-version="true" />
 </head>
@@ -13,7 +14,7 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">BisikletSatis.WebUI</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Evcim Bisiklet</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -27,28 +28,36 @@
                             <a class="nav-link text-dark" asp-controller="Home" asp-action="Privacy">Gizlilik</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-controller="Bisiklet" asp-action="List">Tüm Araçlarımız</a>
+                            <a class="nav-link text-dark" asp-controller="Bisiklet" asp-action="List">Tüm Bisikletlerimiz</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-controller="Favorites" asp-action="Index">Favorilerim</a>
                         </li>
                     </ul>
                 </div>
-                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search" asp-action="Ara" asp-controller="Bisiklet" method="get"> 
-                    <input name="q" type="search" class="form-control form-control text-bg" placeholder="Ara..." aria-label="Search"> 
-                    </form>
-                <div class="text-end"> 
+                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search" asp-action="Ara" asp-controller="Bisiklet" method="get">
+                    <input name="q" type="search" class="form-control form-control text-bg" placeholder="Ara..." aria-label="Search">
+                </form>
+                <div class="text-end">
                     @if (Context.User.Identity.IsAuthenticated)
                     {
-                        <a asp-controller="Account" asp-action="Index" class="btn btn-primary me-2">Hesabım</a>
-                        <a asp-controller="Account" asp-action="Logout" class="btn btn-primary">Oturumu kapat</a>
+                        <a asp-controller="Account" asp-action="Index" class="btn btn-outline-dark me-2">
+                            <i class="bi bi-person-fill"></i> Hesabım
+                        </a>
+                        <a asp-controller="Account" asp-action="Logout" class="btn btn-outline-dark">
+                            <i class="bi bi-person-x-fill"></i> Oturumu kapat
+                        </a>
                     }
                     else
                     {
-                        <a asp-controller="Account" asp-action="Login" class="btn btn-primary me-2">Giriş</a>
-                        <a asp-controller="Account" asp-action="Register" class="btn btn-primary">Kaydol</a>
+                        <a asp-controller="Account" asp-action="Login" class="btn btn-outline-dark me-2">
+                            <i class="bi bi-person-fill-down"></i> Giriş
+                        </a>
+                        <a asp-controller="Account" asp-action="Register" class="btn btn-outline-dark">
+                            <i class="bi bi-person-fill-add"></i> Kaydol
+                        </a>
                     }
-                    
+
                 </div>
             </div>
         </nav>
