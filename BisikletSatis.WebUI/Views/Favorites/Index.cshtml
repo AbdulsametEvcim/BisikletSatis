@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Bisiklet>
+@{
+    ViewData["Title"] = "Favorilerim";
+}
+
+<h1>Favorilerim</h1>
+
+@if (Model is not null && Model.Count() > 0)
+{
+    <table class="table table-bordered table-bordered">
+        <tr>
+            <th>Bisiklet</th>
+            <th>Resim</th>
+            <th></th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <a href="/Bisiklet/Index/@item.Id">
+                        @item.Marka.Adi @item.Modeli @item.Renk @item.BisikletTipi
+                    </a>
+                </td>
+                <td>
+                    <a href="/Img/Bicycles/@item.Resim1">
+                        <img src="/Img/Bicycles/@item.Resim1" alt="@item.Modeli" height="50" />
+                    </a>
+                </td>
+                <td>
+                </td>
+            </tr>
+        }
+    </table>
+}
+else
+{
+    <div class="alert alert-warning">
+        <h3>Favorilerinizde Bisiklet Yok!</h3>
+    </div>
+}

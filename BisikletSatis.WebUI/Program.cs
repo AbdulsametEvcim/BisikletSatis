@@ -15,6 +15,8 @@ namespace BisikletSatis.WebUI
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
+            builder.Services.AddSession();
+
             builder.Services.AddDbContext<DatabaseContext>();
 
             builder.Services.AddTransient(typeof(IService<>), typeof(Service<>));
@@ -49,6 +51,7 @@ namespace BisikletSatis.WebUI
             }
 
             app.UseHttpsRedirection();
+            app.UseSession();
             app.UseRouting();
 
             app.UseAuthentication();
