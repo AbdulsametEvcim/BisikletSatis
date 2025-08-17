@@ -28,10 +28,14 @@
                 </td>
                 <td>
                     <form action="/Favorites/Remove" method="post">
-                        <input type="hidden" name="bisikletId"
-                               value="@item.Id" />
-                        <button type="submit" class="btn btn-danger">X</button>
+                        <input type="hidden" name="bisikletId" value="@item.Id" />
+                        <button type="submit"
+                                class="btn"
+                                style="background-color:#B22222; border-color:#8B0000; color:#fff;">
+                            X
+                        </button>
                     </form>
+
                 </td>
             </tr>
         }
@@ -39,7 +43,12 @@
 }
 else
 {
-    <div class="alert alert-warning">
+    <div class="alert"
+         style="background-color:#B22222; color:#fff; border:1px solid #8B0000;">
         <h3>Favorilerinizde Bisiklet Yok!</h3>
     </div>
+
+    <div style="margin-bottom:475px;"></div>
+
+
 }

@@ -3,7 +3,7 @@
 @foreach (var item in Model)
 {
     <div class="col mb-5">
-        <div class="card h-100">
+        <div class="card product-card h-100">
             <div class="badge position-absolute" style="top: 0.2rem; right:0.2rem;">
                 <form action="/Favorites/Add" method="post">
                     <input type="hidden" name="bisikletId"
@@ -14,24 +14,27 @@
                 </form>
             </div>
             <!-- Product image-->
-            <img class="card-img-top" src="/Img/Bicycles/@item.Resim1" alt="...">
+            <div class="product-img">
+                <img src="/Img/Bicycles/@item.Resim1" alt="@item.Marka.Adi @item.Modeli" class="img-fluid" />
+            </div>
             <!-- Product details-->
-            <div class="card-body p-4">
-                <div class="text-center">
-                    <!-- Product name-->
-                    <h5 class="fw-bolder">@item.Marka.Adi @item.Modeli @item.BisikletTipi</h5>
-                    <!-- Product price-->
+            <div class="card-body p-4 d-flex flex-column text-center">
+                <!-- d-flex flex-column + text-center eklendi -->
+                <h5 class="product-title fw-bolder">
+                    <!-- product-title eklendi -->
+                    @item.Marka.Adi @item.Modeli @item.BisikletTipi
+                </h5>
+                <div class="product-price">
+                    <!-- product-price eklendi -->
                     @item.Fiyati.ToString("c")
                 </div>
-            </div>
-            <!-- Product actions-->
-            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                <div class="text-center">
+                <div class="btn-area">
+                    <!-- butonu alta sabitlemek için -->
                     <a class="btn btn-outline-dark mt-auto" href="/Bisiklet/Index/@item.Id">İncele</a>
                 </div>
-                <div class="d-flex justify-content-center mt-2">
-                </div>
             </div>
+
+            
         </div>
     </div>
 }

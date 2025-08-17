@@ -7,14 +7,19 @@
     <script type="importmap"></script>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Lato:wght@400&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/BisikletSatis.WebUI.styles.css" asp-append-version="true" />
 </head>
 <body>
+
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Evcim Bisiklet</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                    <i class="bi bi-bicycle"></i> Evcim Bisiklet <i class="bi bi-bicycle"></i>
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -36,7 +41,7 @@
                     </ul>
                 </div>
                 <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search" asp-action="Ara" asp-controller="Bisiklet" method="get">
-                    <input name="q" type="search" class="form-control form-control text-bg" placeholder="Ara..." aria-label="Search">
+                    <input name="q" type="search" class="form-control form-control text-bg " placeholder="Ara..." aria-label="Search">
                 </form>
                 <div class="text-end">
                     @if (Context.User.Identity.IsAuthenticated)
@@ -68,11 +73,80 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="py-3" style="background-color:#f8f9fa; border-top:1px solid #000;">
         <div class="container">
-            &copy; 2025 - BisikletSatis.WebUI - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <div class="row">
+
+                <div class="col-md-3 mb-3">
+                    <h5>Bize Ulaşın</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-body-secondary">
+                                <strong style="color:#000;">Adres:</strong> Evcim Bisiklet – Ereğli / Kdz
+                            </a>
+                        </li>
+
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-body-secondary">
+                                <strong style="color:#000;">Email:</strong> aevcim@bisikletsatis.com
+                            </a>
+                        </li>
+
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-body-secondary">
+                                <strong style="color:#000;">Telefon:</strong> 0850 1907 0667
+                            </a>
+                        </li>
+
+
+                    </ul>
+                </div>
+
+
+                <div class="col-md-3 mb-3">
+                    <h5>Çok Satan Markalar</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Salcano</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Bianchi</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Bisan</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 mb-3">
+                    <h5>Çok Satan Kategoriler</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Şehir</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Dağ</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Yol</a></li>
+
+                    </ul>
+                </div>
+
+                <div class="col-md-3 mb-3">
+                    <h5>Bültenimize Abone Ol</h5>
+                    <p>Bizden en yeni ve heyecan verici gelişmeleri her ay öğrenin.</p>
+                    <form>
+                        <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                            <label for="newsletter1" class="visually-hidden">E-posta adresi</label>
+                            <input id="newsletter1" type="email" class="form-control" placeholder="E-posta adresi">
+                            <button class="btn btn-dark" type="button">Abone Ol</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="d-flex justify-content-between py-3 border-top footer-bottom">
+                <p class="mb-0 text-body-secondary">© 2025 Şirket Adı. Tüm hakları saklıdır.</p>
+                <ul class="list-unstyled d-flex">
+                    <li class="ms-3"><a class="link-body-emphasis" href="#"><i class="bi bi-twitter"></i></a></li>
+                    <li class="ms-3"><a class="link-body-emphasis" href="#"><i class="bi bi-instagram"></i></a></li>
+                    <li class="ms-3"><a class="link-body-emphasis" href="#"><i class="bi bi-facebook"></i></a></li>
+                </ul>
+            </div>
         </div>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

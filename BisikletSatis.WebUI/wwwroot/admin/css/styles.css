@@ -11241,3 +11241,37 @@ body {
   font-size: 0.75rem;
   border-radius: 0.375rem !important;
 }
+
+.sb-sidenav {
+    background-color: #1c1c1c !important; 
+}
+
+
+.sb-sidenav-dark .sb-sidenav-footer {
+    background-color: #1c1c1c !important;
+    color: #fff !important;
+}
+
+
+.sb-topnav.navbar {
+    background-color: #1c1c1c !important; 
+}
+
+<style>
+ 
+  .chk-black{
+    -webkit-appearance:none; appearance:none;
+    width:1.1rem; height:1.1rem;
+    border:2px solid #000; border-radius:.25rem;
+    background:#fff; cursor:pointer; position:relative;
+    display:inline-block; vertical-align:middle;
+  }
+  .chk-black:focus{ outline:none; box-shadow:0 0 0 .2rem rgba(0,0,0,.15); }
+  .chk-black:checked{ background:#000; border-color:#000; }
+  .chk-black:checked::after{
+    content:""; position:absolute;
+    top:50%; left:50%; width:.55rem; height:.35rem;
+    transform:translate(-50%,-60%) rotate(-45deg);
+    border-left:2px solid #fff; border-bottom:2px solid #fff;
+  }
+</style>
