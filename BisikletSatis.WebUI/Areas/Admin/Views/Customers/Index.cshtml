@@ -65,8 +65,9 @@
                     @Html.DisplayFor(modelItem => item.Notlar)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Bisiklet.BisikletTipi)
+                    @($"{item.Bisiklet?.Marka?.Adi} {item.Bisiklet?.Modeli} {item.Bisiklet?.BisikletTipi}")
                 </td>
+
                 <td>
                     <a class="btn btn-dark" asp-action="Edit" asp-route-id="@item.Id">Düzenle</a> |
                     <a class="btn" style="background-color:#B22222; border-color:#8B0000; color:#fff;"
