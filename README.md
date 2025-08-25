@@ -16,7 +16,7 @@ ASP.NET Core MVC kullanılarak geliştirilmiştir.
 
 ## Ekran Görüntüleri
 ### Ana Sayfa
-![Ana Sayfa](images/detay.png)
+![Ana Sayfa](images/ss.png)
 
 
 ### Ürün Detay
