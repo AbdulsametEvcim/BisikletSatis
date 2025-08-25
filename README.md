@@ -4,19 +4,20 @@ Bu proje, bisiklet ürünlerinin çevrimiçi incelenmesini ve bilgilerini alabil
 ASP.NET Core MVC kullanılarak geliştirilmiştir.
 
 ## Özellikler
-- Kullanıcı kayıt & giriş sistemi
-- Ürün listeleme ve detay sayfası
-
-- Admin paneli (ürün / kategori / marka yönetimi)
+- Kullanıcı kayıt & giriş
+- Bisiklet listeleme ve detay sayfası
+- Favorilere ekleme / çıkarma
+- Ana sayfa slider alanı
+- Admin paneli:
+  - Bisiklet / Marka / Müşteri CRUD
+  - Kullanıcı & Rol yönetimi
+  - Satış (Satis) kayıtları
+  - Tamirhane/Servis kayıtları (onarım süreçleri)
 
 ## Ekran Görüntüleri
 ### Ana Sayfa
-![Ana Sayfa](images/home.png)
+![Ana Sayfa](images/detay.png)
+
 
 ### Ürün Detay
 ![Ürün Detay](images/product.png)
-
-## Kurulum
-```bash
-git clone https://github.com/kullaniciadi/BisikletSatis.git
-cd BisikletSatis
