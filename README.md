@@ -14,22 +14,25 @@ ASP.NET Core MVC tabanlı olarak geliştirilmiş olup, **modern ve yönetilebili
 - 🖼️ **Ana sayfa slider alanı**
 
 - 🛠️ **Admin paneli**:
+  - 📊 *Dashboard (istatistik kartları)*
   - 📦 *Bisiklet / Marka / Müşteri CRUD*
   - 👥 *Kullanıcı & Rol yönetimi*
   - 💰 *Satış (Satis) kayıtları*
   - 🔧 *Tamirhane / Servis kayıtları (onarım süreçleri)*
 
 
+
 ---
 
 ## 🛠️ Kullanılan Teknolojiler
-- **ASP.NET Core MVC** – web uygulama geliştirme
-- **Entity Framework Core** – ORM ve veritabanı işlemleri
-- **Identity** – kullanıcı/rol yönetimi
-- **Bootstrap 5** – arayüz tasarımı
-- **Font Awesome** – ikon kütüphanesi
-- **Visual Studio 2022** – geliştirme ortamı
-- **Git & GitHub** – versiyon kontrol ve proje yönetimi
+- ⚡ **ASP.NET Core MVC** – web uygulama geliştirme
+- 🗄️ **Entity Framework Core** – ORM ve veritabanı işlemleri
+- 🔐 **Identity** – kullanıcı/rol yönetimi
+- 🎨 **Bootstrap 5** – arayüz tasarımı
+- 🎯 **Font Awesome** – ikon kütüphanesi
+- 💻 **Visual Studio 2022** – geliştirme ortamı
+- 🌍 **Git & GitHub** – versiyon kontrol ve proje yönetimi
+	
 
 ---
 
