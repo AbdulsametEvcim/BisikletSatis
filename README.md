@@ -42,5 +42,28 @@ ASP.NET Core MVC kullanılarak geliştirilmiştir.
 
 
 
-### Ürün Detay
-![Ürün Detay](images/product.png)
+### Admin Paneli
+
+#### Dashboard
+![adminpanel](BisikletSatis.WebUI/ss/adminpanel.png)
+
+#### Slider
+![slider](BisikletSatis.WebUI/ss/slider.png)
+
+#### Kullanıcılar
+![kullanıcilar](BisikletSatis.WebUI/ss/kullanıcilar.png)
+
+#### Markalar
+![markalar](BisikletSatis.WebUI/ss/markalar.png)
+
+#### Bisikletler
+![bisikletler](BisikletSatis.WebUI/ss/bisikletler.png)
+
+#### Müşteriler
+![müsteriler](BisikletSatis.WebUI/ss/müsteriler.png)
+
+#### Satışlar
+![satislar](BisikletSatis.WebUI/ss/satislar.png)
+
+#### Tamirhane
+![tamir](BisikletSatis.WebUI/ss/tamir.png)
