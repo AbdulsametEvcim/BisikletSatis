@@ -5,19 +5,6 @@ ASP.NET Core MVC kullanılarak geliştirilmiştir.
 
 ---
 
-## Özellikler
-- Kullanıcı kayıt & giriş
-- Bisiklet listeleme ve detay sayfası
-- Favorilere ekleme / çıkarma
-- Ana sayfa slider alanı
-- **Admin paneli**:
-  - Bisiklet / Marka / Müşteri CRUD
-  - Kullanıcı & Rol yönetimi
-  - Satış (Satis) kayıtları
-  - Tamirhane / Servis kayıtları (onarım süreçleri)
-
----
-
 ## ✨ Özellikler
 - 👤 **Kullanıcı kayıt & giriş**
 - 🚴 **Bisiklet listeleme ve detay sayfası**
@@ -30,6 +17,17 @@ ASP.NET Core MVC kullanılarak geliştirilmiştir.
   - 💰 *Satış (Satis) kayıtları*
   - 🔧 *Tamirhane / Servis kayıtları (onarım süreçleri)*
 
+
+---
+
+## 🛠️ Kullanılan Teknolojiler
+- **ASP.NET Core MVC** – web uygulama geliştirme
+- **Entity Framework Core** – ORM ve veritabanı işlemleri
+- **Identity** – kullanıcı/rol yönetimi
+- **Bootstrap 5** – arayüz tasarımı
+- **Font Awesome** – ikon kütüphanesi
+- **Visual Studio 2022** – geliştirme ortamı
+- **Git & GitHub** – versiyon kontrol ve proje yönetimi
 
 ---
 
