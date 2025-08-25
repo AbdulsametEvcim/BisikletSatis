@@ -54,7 +54,7 @@ ASP.NET Core MVC tabanlı olarak geliştirilmiş olup, **modern ve yönetilebili
 *Kullanıcının profil sayfası*
 
 #### Tüm Bisikletler
-![Tüm Bisikletler](BisikletSatis.WebUI/ss/tumbisikletler.png)
+![Tüm Bisikletler](BisikletSatis.WebUI/ss/tumbisiklet.png)
 
 #### Favoriler ve İncele
 ![Favorilerveİncele](BisikletSatis.WebUI/ss/favoriveincele.png)
