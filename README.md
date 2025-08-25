@@ -51,7 +51,7 @@ ASP.NET Core MVC kullanılarak geliştirilmiştir.
 ![slider](BisikletSatis.WebUI/ss/slider.png)
 
 #### Kullanıcılar
-![kullanıcilar](BisikletSatis.WebUI/ss/kullanıcilar.png)
+![kullanicilar](BisikletSatis.WebUI/ss/kullanicilar.png)
 
 #### Markalar
 ![markalar](BisikletSatis.WebUI/ss/markalar.png)
