@@ -33,7 +33,7 @@ ASP.NET Core MVC kullanılarak geliştirilmiştir.
 ![Tüm Bisikletler](BisikletSatis.WebUI/ss/tumbisikletler.png)
 
 #### Favoriler ve İncele
-![Favoriler ve İncele](BisikletSatis.WebUI/ss/favoriveincele.png)
+![Favorilerveİncele](BisikletSatis.WebUI/ss/favoriveincele.png)
 
 #### Detay
 ![Detay](BisikletSatis.WebUI/ss/detay.png)
