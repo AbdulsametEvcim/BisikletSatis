@@ -1,7 +1,9 @@
-﻿# Bisiklet Tanıtım ve Satış Destek Uygulaması 🚴‍♂️
+﻿# 🚴‍♂️ Bisiklet Tanıtım ve Satış Destek Uygulaması
 
-Bu proje, bisiklet ürünlerinin çevrimiçi incelenmesini ve bilgilerini alabilmesi amacıyla
-ASP.NET Core MVC kullanılarak geliştirilmiştir.
+Bu proje, **bisiklet ürünlerinin çevrimiçi tanıtımını** yaparak kullanıcıların 
+ürünleri kolayca inceleyebilmesini ve detaylı bilgilere ulaşabilmesini sağlar.  
+ASP.NET Core MVC tabanlı olarak geliştirilmiş olup, **modern ve yönetilebilir bir e-ticaret altyapısı** sunmayı amaçlamaktadır.
+
 
 ---
 
