@@ -15,7 +15,6 @@ ASP.NET Core MVC kullanılarak geliştirilmiştir.
   - Tamirhane/Servis kayıtları (onarım süreçleri)
 
 ## Ekran Görüntüleri
-### Ana Sayfa
 
 #### Ana Sayfa
 ![AnaSayfa](BisikletSatis.WebUI/ss/anasayfa.png)
