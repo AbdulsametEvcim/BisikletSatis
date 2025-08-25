@@ -3,30 +3,40 @@
 Bu proje, bisiklet ürünlerinin çevrimiçi incelenmesini ve bilgilerini alabilmesi amacıyla
 ASP.NET Core MVC kullanılarak geliştirilmiştir.
 
+---
+
 ## Özellikler
 - Kullanıcı kayıt & giriş
 - Bisiklet listeleme ve detay sayfası
 - Favorilere ekleme / çıkarma
 - Ana sayfa slider alanı
-- Admin paneli:
+- **Admin paneli**:
   - Bisiklet / Marka / Müşteri CRUD
   - Kullanıcı & Rol yönetimi
   - Satış (Satis) kayıtları
-  - Tamirhane/Servis kayıtları (onarım süreçleri)
+  - Tamirhane / Servis kayıtları (onarım süreçleri)
 
-## Ekran Görüntüleri
+---
+
+## 📸 Ekran Görüntüleri
+
+### 🌐 Kullanıcı Arayüzü
 
 #### Ana Sayfa
-![AnaSayfa](BisikletSatis.WebUI/ss/anasayfa.png)
+![AnaSayfa](BisikletSatis.WebUI/ss/anasayfa.png)  
+*Ana sayfa görünümü*
 
 #### Giriş
-![Giriş](BisikletSatis.WebUI/ss/giris.png)
+![Giriş](BisikletSatis.WebUI/ss/giris.png)  
+*Kullanıcı giriş ekranı*
 
 #### Kaydol
-![Kaydol](BisikletSatis.WebUI/ss/kaydol.png)
+![Kaydol](BisikletSatis.WebUI/ss/kaydol.png)  
+*Yeni kullanıcı kayıt ekranı*
 
 #### Hesabım
-![Hesabım](BisikletSatis.WebUI/ss/hesabim.png)
+![Hesabım](BisikletSatis.WebUI/ss/hesabim.png)  
+*Kullanıcının profil sayfası*
 
 #### Tüm Bisikletler
 ![Tüm Bisikletler](BisikletSatis.WebUI/ss/tumbisikletler.png)
@@ -40,30 +50,30 @@ ASP.NET Core MVC kullanılarak geliştirilmiştir.
 #### Favoriler
 ![Favoriler](BisikletSatis.WebUI/ss/favoriler.png)
 
+---
 
-
-### Admin Paneli
+### 🛠️ Admin Paneli
 
 #### Dashboard
-![adminpanel](BisikletSatis.WebUI/ss/adminpanel.png)
+![AdminPanel](BisikletSatis.WebUI/ss/adminpanel.png)
 
-#### Slider
-![slider](BisikletSatis.WebUI/ss/slider.png)
+#### Slider Yönetimi
+![Slider](BisikletSatis.WebUI/ss/slider.png)
 
 #### Kullanıcılar
-![kullanicilar](BisikletSatis.WebUI/ss/kullanicilar.png)
+![Kullanıcılar](BisikletSatis.WebUI/ss/kullanicilar.png)
 
 #### Markalar
-![markalar](BisikletSatis.WebUI/ss/markalar.png)
+![Markalar](BisikletSatis.WebUI/ss/markalar.png)
 
 #### Bisikletler
-![bisikletler](BisikletSatis.WebUI/ss/bisikletler.png)
+![Bisikletler](BisikletSatis.WebUI/ss/bisikletler.png)
 
 #### Müşteriler
-![müsteriler](BisikletSatis.WebUI/ss/müsteriler.png)
+![Müşteriler](BisikletSatis.WebUI/ss/müsteriler.png)
 
 #### Satışlar
-![satislar](BisikletSatis.WebUI/ss/satislar.png)
+![Satışlar](BisikletSatis.WebUI/ss/satislar.png)
 
 #### Tamirhane
-![tamir](BisikletSatis.WebUI/ss/tamir.png)
+![Tamirhane](BisikletSatis.WebUI/ss/tamir.png)
