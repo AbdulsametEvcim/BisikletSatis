@@ -18,6 +18,18 @@ ASP.NET Core MVC kullanılarak geliştirilmiştir.
 
 ---
 
+## 🛠️ Kullanılan Teknolojiler
+- **ASP.NET Core MVC** – web uygulama geliştirme
+- **Entity Framework Core** – ORM ve veritabanı işlemleri
+- **MS SQL Server** – veritabanı yönetimi
+- **Identity** – kullanıcı/rol yönetimi
+- **Bootstrap 5** – arayüz tasarımı
+- **Font Awesome** – ikon kütüphanesi
+- **Visual Studio 2022** – geliştirme ortamı
+- **Git & GitHub** – versiyon kontrol ve proje yönetimi
+
+---
+
 ## 📸 Ekran Görüntüleri
 
 ### 🌐 Kullanıcı Arayüzü
