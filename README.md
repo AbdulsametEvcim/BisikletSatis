@@ -16,7 +16,7 @@ ASP.NET Core MVC kullanılarak geliştirilmiştir.
 
 ## Ekran Görüntüleri
 ### Ana Sayfa
-![Giriş](BisikletSatis.WebUI/ss/anasayfa.png)
+![Ana Sayfa](BisikletSatis.WebUI/ss/anasayfa.png)
 
 #### Giriş
 ![Giriş](BisikletSatis.WebUI/ss/giris.png)
@@ -28,16 +28,16 @@ ASP.NET Core MVC kullanılarak geliştirilmiştir.
 ![Hesabım](BisikletSatis.WebUI/ss/hesabim.png)
 
 #### Tüm Bisikletler
-![Giriş](BisikletSatis.WebUI/ss/tumbisikletler.png)
+![Tüm Bisikletler](BisikletSatis.WebUI/ss/tumbisikletler.png)
 
 #### Favoriler ve İncele
-![Kaydol](BisikletSatis.WebUI/ss/favorilerveincele.png)
+![Favoriler ve İncele](BisikletSatis.WebUI/ss/favorilerveincele.png)
 
 #### Detay
-![Hesabım](BisikletSatis.WebUI/ss/detay.png)
+![Detay](BisikletSatis.WebUI/ss/detay.png)
 
 #### Favoriler
-![Hesabım](BisikletSatis.WebUI/ss/favoriler.png)
+![Favoriler](BisikletSatis.WebUI/ss/favoriler.png)
 
 
 
